@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);   /*  or 0.7 */
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 body {
   background-color: black; 
   padding-bottom: 1000px;
@@ -38,6 +48,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1000;
 }
 
 .nav-Title{
@@ -194,9 +205,14 @@ body {
 /*! Section 2 */
 
 .frame2 {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(193, 190, 190);
   width: 100%; 
   height: 100vh;
+
+  /* background-image: url("img/pexels-alleksana-4239756.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+  background-repeat: no-repeat; */
 
   display: flex; 
   flex-direction: column;
@@ -209,7 +225,6 @@ body {
   width: 100%;
   height: 100%; 
   padding: 40px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -219,42 +234,140 @@ body {
 
 .overview-center > * {
   height: 100%;
-  /* background-color: lightsalmon; */
+  background-color: rgba(174, 173, 173, 0.7);
+  backdrop-filter: blur(2px);
   flex: 1;
 }
 
 .overview-center-left {
+  background-image: url("img/download\ \(8\).jpg");
+  background-size: cover; 
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
 }
 
+
 .overview-center-left-top {
   /* background-color: lightblue; */
   width: 100%; 
   padding: 10px; 
+  z-index: 1;
 }
 
 .overview-center-left-top h1 {
   text-align: center;
   color: white; 
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   font-family: "Zen Dots";
+  z-index: 1;
 }
 
 .overview-center-left-btm {
   /* background-color: lightseagreen; */
   padding: 0px 40px;
+  z-index: 1;
+
 }
 
 .overview-center-left-btm p {
   color: white;
   font-family: "Zen Kaku Gothic Antique";
-  line-height: 40px;
+  line-height: 50px;
+  padding-bottom: 20px;
 
 }
 
+.overview-center-center {
+  background-image: url("img/futuristics.jpg");
+  background-size: cover; 
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+
+.overview-center-center-top {
+  /* background-color: lightblue; */
+  width: 100%; 
+  padding: 10px; 
+  z-index: 1;
+}
+
+.overview-center-center-top h1 {
+  text-align: center;
+  color: white; 
+  padding-bottom: 30px;
+  font-family: "Zen Dots";
+  z-index: 1;
+}
+
+.overview-center-center-btm {
+  /* background-color: lightseagreen; */
+  padding: 0px 40px;
+  z-index: 1;
+
+}
+
+.overview-center-center-btm p {
+  color: white;
+  font-family: "Zen Kaku Gothic Antique";
+  line-height: 50px;
+  padding-bottom: 20px;
+
+}
+
+.overview-center-right {
+  background-image: url("img/download\ \(7\).jpg");
+  background-size: cover; 
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+
+.overview-center-right-top {
+  /* background-color: lightblue; */
+  width: 100%; 
+  padding: 10px; 
+  z-index: 1;
+}
+
+.overview-center-right-top h1 {
+  text-align: center;
+  color: white; 
+  padding-bottom: 30px;
+  font-family: "Zen Dots";
+  z-index: 1;
+}
+
+.overview-center-right-btm {
+  /* background-color: lightseagreen; */
+  padding: 0px 40px;
+  z-index: 1;
+}
+
+.overview-center-right-btm p {
+  color: white;
+  font-family: "Zen Kaku Gothic Antique";
+  line-height: 50px;
+  padding-bottom: 20px;
+}
 
 
 /*! Section 3  */
@@ -276,7 +389,7 @@ body {
   /* background-color: rgb(129, 189, 187); */
   width: 100%;
   flex: 1;
-  padding: 0 0px;
+  padding: 20px 10px;
 
   display: flex;
   justify-content: space-between;
@@ -313,10 +426,12 @@ body {
   color: white;
   font-family: "Zen Dots";
   text-align: center;
+  padding-top: 10px;
 }
 
 .activities-events-center-left-grid div p {
   color: white;
+  padding: 0 20px;
 }
 .activities-events-center-right {
   /* background-color: rgb(154, 128, 240); */
@@ -325,16 +440,40 @@ body {
 .activities-events-center-right-top{
   /* background-color: lightpink; */
   width: 100%; 
-  height: 50px;
+  /* height: 50px; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.activities-events-center-right-top h5{
+  color: white; 
+  font-family: "Zen Dots";
+  text-align: right;
+  width: 100%;
+  padding-right: 10px;
+  font-weight: 300;
+}
 
 .activities-events-center-right-top h1{
   color: white; 
   font-family: "Zen Dots";
+}
+
+.activities-events-center-right-btm {
+  /* background-color: lightgray; */
+  width: 100%; 
+  padding-top: 100px;
+}
+
+.activities-events-center-right-btm p {
+  color: white;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 50px;
+  font-family: "Zen Kaku Gothic Antique";
+
 }
 
 
